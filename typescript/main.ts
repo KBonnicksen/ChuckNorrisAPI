@@ -33,7 +33,7 @@ function handleRequestChange(){
     //when processing is done and response/data is ready
     if(currRequest.readyState == 4 && 
        currRequest.status == 200){
-        let response = currRequest.responseText;
-        alert(response);
+        let response = JSON.parse(currRequest.responseText);
+        alert(response.value.joke);
     }
 }

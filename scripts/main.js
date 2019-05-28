@@ -15,7 +15,7 @@ function handleRequestChange() {
     console.log("Status: " + currRequest.status);
     if (currRequest.readyState == 4 &&
         currRequest.status == 200) {
-        var response = currRequest.responseText;
-        alert(response);
+        var response = JSON.parse(currRequest.responseText);
+        alert(response.value.joke);
     }
 }
